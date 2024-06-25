@@ -13,7 +13,7 @@ docker run -it mte-example
 
 Inside the docker container (or baremetal):
 ```bash
-# run scripts/setup.sh if not using docker first
+# run 'make setup' if not using docker first
 make
 make run
 ```
