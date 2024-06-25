@@ -11,3 +11,8 @@ setup:
 .PHONY: run
 run:
 	qemu-aarch64 ./mte-by-example.bin
+
+.PHONY: run-gdb
+run-gdb: all
+	qemu-aarch64 -g 1337 ./mte-by-example.bin &
+	gdb -ex 'target remote localhost:1337'
